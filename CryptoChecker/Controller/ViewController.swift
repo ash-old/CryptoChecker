@@ -45,5 +45,11 @@ extension ViewController: UIPickerViewDelegate {
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     return coinManager.cryptoArray[row]
   }
+  
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    print(coinManager.cryptoArray[row])
+    let selectedCrypto = coinManager.cryptoArray[row]
+    coinManager.getCoinPrice(for: selectedCrypto)
+  }
 }
 

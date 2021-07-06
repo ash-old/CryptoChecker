@@ -14,4 +14,8 @@ struct CoinManager {
   
   let cryptoArray = ["1", "2", "3", "4"]
   
+  func getCoinPrice(for currency: String) {
+    
+  }
+  
 }
