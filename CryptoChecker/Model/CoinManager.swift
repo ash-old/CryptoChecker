@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CoinManagerDelegate {
-  func didUpdateWeather(_ coinManager: CoinManager)
+  func didUpdateCoin(_ coinManager: CoinManager)
   func didFailWithError(error: Error)
 
 }
@@ -45,8 +45,8 @@ struct CoinManager {
         
         if let safeData = data {
 //          print("safeData", String(data: safeData, encoding: String.Encoding.ascii)!)
-          if let weather = parseJSON(safeData) {
-//            delegate?.didUpdateWeather(self, weather: weather)
+          if let coinRate = parseJSON(safeData) {
+//            delegate?.didUpdateCoin(coinManager: coinRate)
           }
         }
       }
