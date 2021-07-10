@@ -17,11 +17,11 @@
 		5E60E1D826965138006FE0B2 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60E1D726965138006FE0B2 /* CoinData.swift */; };
 		5E60E1DB269666D1006FE0B2 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60E1DA269666D1006FE0B2 /* CoinModel.swift */; };
 		5E60E1E926987086006FE0B2 /* ETH.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E60E1E326987086006FE0B2 /* ETH.png */; };
-		5E60E1EA26987086006FE0B2 /* DOGE.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E60E1E426987086006FE0B2 /* DOGE.png */; };
 		5E60E1EB26987086006FE0B2 /* ADA.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E60E1E526987086006FE0B2 /* ADA.png */; };
 		5E60E1EC26987086006FE0B2 /* DOT.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E60E1E626987086006FE0B2 /* DOT.png */; };
 		5E60E1ED26987086006FE0B2 /* BTC.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E60E1E726987086006FE0B2 /* BTC.png */; };
 		5E60E1EE26987086006FE0B2 /* MAID.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E60E1E826987086006FE0B2 /* MAID.png */; };
+		5E60E1F22699F1C0006FE0B2 /* DOGE.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E60E1F12699F1C0006FE0B2 /* DOGE.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,11 +37,11 @@
 		5E60E1D726965138006FE0B2 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		5E60E1DA269666D1006FE0B2 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		5E60E1E326987086006FE0B2 /* ETH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ETH.png; sourceTree = "<group>"; };
-		5E60E1E426987086006FE0B2 /* DOGE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DOGE.png; sourceTree = "<group>"; };
 		5E60E1E526987086006FE0B2 /* ADA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADA.png; sourceTree = "<group>"; };
 		5E60E1E626987086006FE0B2 /* DOT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DOT.png; sourceTree = "<group>"; };
 		5E60E1E726987086006FE0B2 /* BTC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTC.png; sourceTree = "<group>"; };
 		5E60E1E826987086006FE0B2 /* MAID.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAID.png; sourceTree = "<group>"; };
+		5E60E1F12699F1C0006FE0B2 /* DOGE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DOGE.png; path = ../../../../../logos/DOGE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 			children = (
 				5E60E1E526987086006FE0B2 /* ADA.png */,
 				5E60E1E726987086006FE0B2 /* BTC.png */,
-				5E60E1E426987086006FE0B2 /* DOGE.png */,
+				5E60E1F12699F1C0006FE0B2 /* DOGE.png */,
 				5E60E1E626987086006FE0B2 /* DOT.png */,
 				5E60E1E326987086006FE0B2 /* ETH.png */,
 				5E60E1E826987086006FE0B2 /* MAID.png */,
@@ -185,10 +185,10 @@
 			files = (
 				5E60E1EE26987086006FE0B2 /* MAID.png in Resources */,
 				5E60E1EB26987086006FE0B2 /* ADA.png in Resources */,
+				5E60E1F22699F1C0006FE0B2 /* DOGE.png in Resources */,
 				5E60E1C72693B905006FE0B2 /* LaunchScreen.storyboard in Resources */,
 				5E60E1C42693B905006FE0B2 /* Assets.xcassets in Resources */,
 				5E60E1ED26987086006FE0B2 /* BTC.png in Resources */,
-				5E60E1EA26987086006FE0B2 /* DOGE.png in Resources */,
 				5E60E1C22693B8FD006FE0B2 /* Main.storyboard in Resources */,
 				5E60E1E926987086006FE0B2 /* ETH.png in Resources */,
 				5E60E1EC26987086006FE0B2 /* DOT.png in Resources */,

@@ -60,8 +60,10 @@ extension ViewController: CoinManagerDelegate {
   
   func didUpdateCoin(coin: String, rate: String) {
     let coinModel = CoinModel(coin: coin)
+    
     DispatchQueue.main.async {
       self.currencyLabelUSD.text = rate
+//      self.currencyLabelGBP.text = coinModel.gbpRate
       self.coinImage.image = coinModel.coinImage
     }
   }
