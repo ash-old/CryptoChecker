@@ -37,6 +37,10 @@ extension ViewController: UIPickerViewDataSource {
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     return coinManager.cryptoArray.count
   }
+  
+  func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    return NSAttributedString(string: coinManager.cryptoArray[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemPink])
+  }
 }
 
 //MARK: - UIPickerViewDelegate

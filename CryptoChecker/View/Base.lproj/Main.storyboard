@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Gcg-sP-4S8">
-                                <rect key="frame" x="20" y="64" width="374" height="832"/>
+                                <rect key="frame" x="20" y="84" width="374" height="812"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CryptoChecker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiD-Sn-k8w">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="SJ2-Rs-UOB"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemPinkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEw-Pr-KFV">
@@ -97,7 +97,7 @@
                                         </subviews>
                                     </stackView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnO-ez-fOn">
-                                        <rect key="frame" x="0.0" y="480" width="374" height="352"/>
+                                        <rect key="frame" x="0.0" y="480" width="374" height="332"/>
                                     </pickerView>
                                 </subviews>
                             </stackView>
@@ -107,7 +107,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Gcg-sP-4S8" secondAttribute="bottom" id="UH3-jL-ShC"/>
                             <constraint firstAttribute="trailing" secondItem="Gcg-sP-4S8" secondAttribute="trailing" constant="20" id="di4-pU-NAm"/>
-                            <constraint firstItem="Gcg-sP-4S8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uMs-7r-tfA"/>
+                            <constraint firstItem="Gcg-sP-4S8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="uMs-7r-tfA"/>
                             <constraint firstItem="Gcg-sP-4S8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="xaP-gZ-shU"/>
                         </constraints>
                     </view>
