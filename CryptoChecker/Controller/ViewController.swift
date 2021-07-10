@@ -58,9 +58,11 @@ extension ViewController: UIPickerViewDelegate {
 
 extension ViewController: CoinManagerDelegate {
   
-  func didUpdateCoin(_ coinManager: CoinManager, rate: CoinModel) {
+  func didUpdateCoin(coin: String, rate: String) {
+    let coinModel = CoinModel(coin: coin)
     DispatchQueue.main.async {
-      self.currencyLabelUSD.text = rate.rateString
+      self.currencyLabelUSD.text = rate
+      self.coinImage.image = coinModel.coinImage
     }
   }
   

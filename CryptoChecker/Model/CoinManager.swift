@@ -8,9 +8,9 @@
 import Foundation
 
 protocol CoinManagerDelegate {
-  func didUpdateCoin(_ coinManager: CoinManager, rate: CoinModel)
+  func didUpdateCoin(coin: String, rate: String)
   func didFailWithError(error: Error)
-
+  
 }
 
 struct CoinManager {
@@ -25,10 +25,7 @@ struct CoinManager {
   func getCryptoCoin(for coin: String) {
     let urlString = "\(url)\(coin)/USD?apikey=\(apiKey)"
     //print(urlString)
-    performRequest(with: urlString)
-  }
   
-  func performRequest(with urlString: String) {
     //1. create a URL
     if let url = URL(string: urlString) {
       
@@ -44,10 +41,10 @@ struct CoinManager {
         }
         
         if let safeData = data {
-//          print("safeData", String(data: safeData, encoding: String.Encoding.ascii)!)
+          //          print("safeData", String(data: safeData, encoding: String.Encoding.ascii)!)
           if let coinRate = parseJSON(safeData) {
-            print(coinRate)
-            delegate?.didUpdateCoin(self, rate: coinRate)
+            let StringRate = String(format: "%.2f", coinRate)
+            delegate?.didUpdateCoin(coin: coin, rate: StringRate)
           }
         }
       }
@@ -57,14 +54,12 @@ struct CoinManager {
     }
   }
   
-  func parseJSON(_ data: Data) -> CoinModel? {
+  func parseJSON(_ data: Data) -> Double? {
     let decoder = JSONDecoder()
     do {
       let decodedData = try decoder.decode(CoinData.self, from: data)
       let coinPrice = decodedData.rate
-//      print(coinPrice)
-      let coinModel = CoinModel(coinRate: coinPrice)
-      return coinModel
+      return coinPrice
       
     } catch {
       delegate?.didFailWithError(error: error)
