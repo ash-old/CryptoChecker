@@ -24,7 +24,7 @@ struct CoinManager {
   
   func getCryptoCoin(for coin: String) {
     let urlString = "\(url)\(coin)/USD?apikey=\(apiKey)"
-    //print(urlString)
+    print(urlString)
   
     //1. create a URL
     if let url = URL(string: urlString) {
