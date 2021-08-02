@@ -8,7 +8,8 @@
 import Foundation
 
 protocol CoinManagerDelegate {
-  func didUpdateCoin(coin: String, rate: String)
+//  func didUpdateCoin(coin: String, rate: String)
+  func didUpdateCoin(coinData: CoinModel)
   func didFailWithError(error: Error)
   
 }
@@ -23,43 +24,65 @@ struct CoinManager {
   var delegate: CoinManagerDelegate?
   
   func getCryptoCoin(for coin: String) {
-    let urlString = "\(url)\(coin)/USD?apikey=\(apiKey)"
-    print(urlString)
+    
+    let group = DispatchGroup()
+    
+//    let urlString1 = "\(url)\(coin)/USD?apikey=\(apiKey)"
+    let urlString2 = "\(url)\(coin)/GBP?apikey=\(apiKey)"
+    print("gbp", urlString2)
   
     //1. create a URL
-    if let url = URL(string: urlString) {
+     let urls = [
+//        URL(string: urlString1),
+        URL(string: urlString2),
+        ]
       
       //2. create a URLSession
       let session = URLSession(configuration: .default)
       
       //3. give the session a task
-      let task = session.dataTask(with: url) { (data, response, error) in
+      for url in urls {
+        group.enter()
+      
+      let task = session.dataTask(with: url!) { (data, response, error) in
         if error != nil {
           delegate?.didFailWithError(error: error!)
           print("Error", error!)
+          group.leave()
+          group.notify(queue: DispatchQueue.main, execute: {
+                 print("All Done");
+               })
           return
+        
         }
         
         if let safeData = data {
           //          print("safeData", String(data: safeData, encoding: String.Encoding.ascii)!)
           if let coinRate = parseJSON(safeData) {
-            let StringRate = String(format: "%.2f", coinRate)
-            delegate?.didUpdateCoin(coin: coin, rate: StringRate)
+//            print("data", coinRate)
+//            let StringRate = String(format: "%.2f", coinRate)
+            delegate?.didUpdateCoin(coinData: coinRate)
+            
           }
         }
       }
       
       //4. start the task
       task.resume()
+      
     }
   }
   
-  func parseJSON(_ data: Data) -> Double? {
+  func parseJSON(_ data: Data) -> CoinModel? {
     let decoder = JSONDecoder()
     do {
       let decodedData = try decoder.decode(CoinData.self, from: data)
-      let coinPrice = decodedData.rate
-      return coinPrice
+      let name = decodedData.asset_id_base
+      let gbpPrice = decodedData.rate
+      let usdPrice = decodedData.src_side_base[2].rate
+//      print("usd", usdPrice)
+      let coinModel = CoinModel(coin: name, gbpRate: gbpPrice, usdRate: usdPrice)
+      return coinModel
       
     } catch {
       delegate?.didFailWithError(error: error)

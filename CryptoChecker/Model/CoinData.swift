@@ -8,5 +8,11 @@
 import Foundation
 
 struct CoinData: Codable {
+  let asset_id_base: String
+  let rate: Double
+  let src_side_base: [USD]
+}
+
+struct USD: Codable {
   let rate: Double
 }

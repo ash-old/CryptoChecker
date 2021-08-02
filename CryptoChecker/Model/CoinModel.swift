@@ -11,15 +11,17 @@ let logo = [#imageLiteral(resourceName: "BTC.png"), #imageLiteral(resourceName: 
 
 struct CoinModel {
   let coin: String
-//  let rate: String
+  let gbpRate: Double
+  let usdRate: Double
   
-//  var gbpRate: String {
-//    var answer = Int()
-//    if let newRate = Int(rate) {
-//    answer = (newRate * 71) / 100
-//    }
-//    return String(format: "%.2f", answer)
-//  }
+  var gbpString: String {
+    return String(format: "%.2f", gbpRate)
+  }
+  
+  var usdString: String {
+    return String(format: "%.2f", usdRate)
+  }
+  
   
   var coinImage: UIImage {
     switch coin {
