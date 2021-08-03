@@ -48,7 +48,7 @@
                                                         <color key="textColor" red="0.99999517199999999" green="0.56865602729999998" blue="0.30195426939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VE-2p-qi6">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6VE-2p-qi6">
                                                         <rect key="frame" x="293.5" y="0.0" width="70.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                         <color key="textColor" red="0.99999517199999999" green="0.56865602729999998" blue="0.30195426939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -91,7 +91,7 @@
                                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lc-wN-m1O">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lc-wN-m1O">
                                                         <rect key="frame" x="296.5" y="0.0" width="67.5" height="70"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                         <color key="textColor" systemColor="systemOrangeColor"/>

@@ -66,8 +66,8 @@ extension ViewController: CoinManagerDelegate {
 //    let coinModel = CoinModel(coin: coin)
     
     DispatchQueue.main.async {
-      self.currencyLabelUSD.text = coinData.usdString
-      self.currencyLabelGBP.text = coinData.gbpString
+      self.currencyLabelUSD.text = "$ \(coinData.usdString)"
+      self.currencyLabelGBP.text = "£ \(coinData.gbpString)"
       self.coinImage.image = coinData.coinImage
     }
   }
